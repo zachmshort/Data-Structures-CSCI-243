@@ -9,8 +9,12 @@ def insertion_sort(arr):
 
 def selection_sort(arr): 
     for i in range(0,len(arr)):
-        pass
-
-    while True:
-        if True:
-            pass
+        minloc = i
+        j = i + 1
+        while j < len(arr):
+            if arr[j] < arr[minloc]:
+                minloc = j
+            j+= 1
+        temp_var = arr[i] 
+        arr[i] = arr[minloc]
+        arr[minloc] = temp_var
